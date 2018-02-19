@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import Dropdown from './components/Dropdown'
+//import DeleteCoin from './components/DeleteCoin'
 
 
 
@@ -15,7 +17,7 @@ class App extends Component {
 
     }
 
-    this.handleChange = this.handleChange.bind(this);
+    //this.handleChange = this.handleChange.bind(this);
     this.sortCoin = this.sortCoin.bind(this);
     this.sortMarketCap = this.sortMarketCap.bind(this);
     this.sortPrice = this.sortPrice.bind(this);
@@ -23,16 +25,16 @@ class App extends Component {
   }
 
   componentDidMount() {
+    
     axios.get("http://localhost:3001/ticker").then(response => {
       console.log(response);
       this.setState({ coinApi: response.data, Coin1: response.data[0] })
-
     })
   }
-  //dropdown button
-  handleChange(event) {
-    this.setState({ value: event.target.value })
-  }
+  // //dropdown button
+  // handleChange(event) {
+  //   this.setState({ value: event.target.value })
+  // }
   //sort 24hr change
   sortCoin(event) {
     const sortedCoin = this.state.coinApi.sort(function (a, b) {
@@ -68,19 +70,7 @@ class App extends Component {
           Cryptocurrencies
         </header>
 
-        {/* Button */}
-        <section className="sectionRight">
-          <div className="dropdown">
-            <button className="dropbtn">Number of coins to display</button>
-            <select value={this.state.value} onChange={this.handleChange} className="dropdown-content">
-              <option value="10">10 currencies</option>
-              <option value="25">25 currencies</option>
-              <option value="50">50 currencies</option>
-              <option value="75">75 currencies</option>
-              <option value="100">List All</option>
-            </select>
-          </div>
-        </section>
+          <Dropdown />
 
         <section className="sectionLeft">
           <table className="header">
@@ -98,6 +88,7 @@ class App extends Component {
                 } else {
                   return (
                     <tr key={elm.name}>
+                      {/* <DeleteCoin/> */}
                       <td value={this.state.coinApi} onClick={() => this.deleteCoin(index)} className="name">{elm.name}</td>
                       <td className="price">${elm.price_usd}</td>
                       <td className="change">{elm.percent_change_24h}% </td>
