@@ -64,6 +64,11 @@ class App extends Component {
       <div className="App">
         <title>Cryptocurrencies</title>
         <header className="App-header">Cryptocurrencies</header>
+        <p className="description">
+          Be advised, Cryptocurrency data may be delayed by 5 minutes. The data
+          are sortable by the column headers and the indivudal coins can be
+          removed with a click.
+        </p>
 
         {/* Button */}
         <section className="content-top">

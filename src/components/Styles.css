@@ -5,13 +5,21 @@
   font-size: 20px;
   letter-spacing: 0.5px;
 }
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+  height: 50px;
+}
 
 .dropdown {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 40px 0px 70px 0;
+  margin: 50px 0px 70px 0;
 }
 .content-top {
   display: flex;
@@ -29,7 +37,36 @@
 .content-bottom {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
+}
+
+th.priceHeader:hover {
+  cursor: pointer;
+  color: rgb(122, 122, 122);
+}
+th.changeHeader:hover {
+  cursor: pointer;
+  color: rgb(122, 122, 122);
+}
+th.marketHeader:hover {
+  cursor: pointer;
+  color: rgb(122, 122, 122);
+}
+td.name:hover {
+  cursor: pointer;
+  color: rgb(122, 122, 122);
+}
+
+th.priceHeader {
+  padding: 3px 50px;
+}
+th.changeHeader {
+  padding: 3px 50px;
+}
+th.marketHeader {
+  padding: 3px 50px;
+}
+td.name {
+  padding: 3px 50px;
 }
