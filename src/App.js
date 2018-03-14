@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+import "./components/Styles.css";
 //import Dropdown from "./components/Dropdown";
 //import DeleteCoin from './components/DeleteCoin'
 
@@ -65,13 +66,13 @@ class App extends Component {
         <header className="App-header">Cryptocurrencies</header>
 
         {/* Button */}
-        <section className="sectionRight">
+        <section className="content-top">
           <div className="dropdown">
-            <button className="dropbtn">Number of coins to display</button>
+            <p className="dropText">Number of coins to display:</p>
             <select
               value={this.state.value}
               onChange={this.handleChange}
-              className="dropdown-content"
+              className="dropdown-choice"
             >
               <option value="10">10 currencies</option>
               <option value="25">25 currencies</option>
@@ -82,7 +83,7 @@ class App extends Component {
           </div>
         </section>
 
-        <section className="sectionLeft">
+        <section className="content-bottom">
           <table className="header">
             <tbody>
               <tr>
@@ -108,7 +109,7 @@ class App extends Component {
                 <th
                   value={this.state.sort}
                   onClick={this.sortMarketCap}
-                  className="mcHeader"
+                  className="marketHeader"
                   a
                   href="#"
                 >
