@@ -18,6 +18,9 @@
     margin: 0px 20px;
     padding: 0px 10px;
   }
+  .table tr:nth-child(even) {
+    background-color: #e7e4ff;
+  }
 }
 /* for-tablet-portrait-up  */
 @media (min-width: 600px) {
@@ -34,12 +37,18 @@
     font-size: 18px;
     margin: 10px;
   }
+  .table tr:nth-child(even) {
+    background-color: #e7e4ff;
+  }
 }
 
 /* for-tablet-landscape-up  */
 @media (min-width: 900px) {
   .description {
-    margin: 0 120px;
+    margin: 0 150px;
+  }
+  .table tr:nth-child(even) {
+    background-color: #e7e4ff;
   }
 }
 /* for-desktop-up  */
@@ -56,5 +65,8 @@
   th.marketHeader,
   td.name {
     padding: 3px 100px;
+  }
+  .table tr:nth-child(even) {
+    background-color: #e7e4ff;
   }
 }
