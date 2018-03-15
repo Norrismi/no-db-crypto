@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import "./components/Styles.css";
-import './components/MediaQueries.css'
+import "./components/MediaQueries.css";
 //import Dropdown from "./components/Dropdown";
 //import DeleteCoin from './components/DeleteCoin'
 
@@ -136,9 +136,14 @@ class App extends Component {
                       >
                         {elm.name}
                       </td>
-                      <td className="price">${elm.price_usd}</td>
+                      <td className="price">$ {elm.price_usd}</td>
                       <td className="change">{elm.percent_change_24h}% </td>
-                      <td className="marketCap">${elm.market_cap_usd.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </td>
+                      <td className="marketCap">
+                        ${elm.market_cap_usd.replace(
+                          /\B(?=(\d{3})+(?!\d))/g,
+                          ","
+                        )}{" "}
+                      </td>
                     </tr>
                   );
                 }
