@@ -1,0 +1,60 @@
+/* for-phone-only  */
+@media (max-width: 599px) {
+  .App-header {
+    height: 20px;
+    margin: 0 0 20px 0;
+  }
+  .description {
+    margin: 0 50px;
+  }
+  th.priceHeader,
+  th.changeHeader,
+  th.marketHeader,
+  td.name {
+    padding: 0px 0px;
+    margin: 30px;
+  }
+  .table {
+    margin: 0px 20px;
+    padding: 0px 10px;
+  }
+}
+/* for-tablet-portrait-up  */
+@media (min-width: 600px) {
+  .App-header {
+    height: 20px;
+    margin: 0 0 40px 0;
+  }
+  .description {
+    margin: 0 30px;
+    font-size: 20px;
+  }
+
+  .table {
+    font-size: 18px;
+    margin: 10px;
+  }
+}
+
+/* for-tablet-landscape-up  */
+@media (min-width: 900px) {
+  .description {
+    margin: 0 120px;
+  }
+}
+/* for-desktop-up  */
+@media (min-width: 1200px) {
+  .App-header {
+    height: 20px;
+    margin: 0 0 20px 0;
+  }
+  .description {
+    margin: 0 120px;
+  }
+  th.priceHeader,
+  th.changeHeader,
+  th.marketHeader,
+  td.name {
+    padding: 3px 100px;
+  }
+}
