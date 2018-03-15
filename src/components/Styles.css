@@ -58,15 +58,9 @@ td.name:hover {
   color: rgb(122, 122, 122);
 }
 
-th.priceHeader {
-  padding: 3px 50px;
-}
-th.changeHeader {
-  padding: 3px 50px;
-}
-th.marketHeader {
-  padding: 3px 50px;
-}
+th.priceHeader,
+th.changeHeader,
+th.marketHeader,
 td.name {
   padding: 3px 50px;
 }

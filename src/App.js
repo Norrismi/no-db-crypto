@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import "./components/Styles.css";
+import './components/MediaQueries.css'
 //import Dropdown from "./components/Dropdown";
 //import DeleteCoin from './components/DeleteCoin'
 
@@ -89,7 +90,7 @@ class App extends Component {
         </section>
 
         <section className="content-bottom">
-          <table className="header">
+          <table className="table">
             <tbody>
               <tr>
                 <th className="nameHeader">Name</th>
